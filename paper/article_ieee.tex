@@ -1,0 +1,38 @@
+\documentclass[conference]{IEEEtran}
+\usepackage[utf8]{inputenc}
+\usepackage{cite,amsmath,amssymb,graphicx,booktabs,url}
+\title{Design and Implementation of a Machine Learning-Based Business Intelligence Model for Anomaly Detection and Business KPI Reliability Assessment}
+\author{\IEEEauthorblockN{Author Name}\IEEEauthorblockA{Institution\\City, Country\\email@example.com}}
+\begin{document}\maketitle
+\begin{abstract}
+This paper presents a Business Intelligence prototype integrating data profiling, unsupervised anomaly detection, and KPI sensitivity analysis for transactional retail data. Isolation Forest and Local Outlier Factor are compared with a robust statistical baseline. Controlled synthetic perturbations provide labels for evaluating detection performance, while a separate sensitivity analysis quantifies the potential effect of flagged invoices on selected business indicators. The study uses Online Retail II from the UCI Machine Learning Repository. Numerical results must be inserted only after executing and validating the experiments.
+\end{abstract}
+\begin{IEEEkeywords}
+Business Intelligence, anomaly detection, machine learning, data quality, SMEs, KPI, Isolation Forest, Local Outlier Factor.
+\end{IEEEkeywords}
+\section{Introduction}
+Small and medium-sized enterprises may use transactional data to monitor sales and operational performance. Unusual records and data quality issues can affect the interpretation of business indicators. This study investigates a reproducible BI workflow that flags unusual invoice-level patterns and measures KPI sensitivity to those flags.
+\section{Related Work}
+Complete this section through a documented search of IEEE Xplore, Scopus, Web of Science, ScienceDirect, SpringerLink, ACM Digital Library, and Google Scholar. Compare SME BI, data quality assessment, unsupervised anomaly detection, and KPI reliability. Do not claim novelty solely from combining known algorithms.
+\section{Proposed Model}
+The prototype includes data ingestion, data profiling, invoice-level feature engineering, anomaly detection, KPI calculation and sensitivity analysis, and dashboard visualization. Statistical atypicality is a review signal, not proof of erroneous data.
+\section{Dataset and Methodology}
+The study uses Online Retail II, UCI Machine Learning Repository, DOI: 10.24432/C5CG6D. It represents transactions from a UK online retailer and is not a representative sample of Colombian SMEs. Negative quantities and cancellation records are retained as potentially meaningful business signals.
+\subsection{Anomaly Detection}
+Isolation Forest and Local Outlier Factor are compared with a robust median/MAD statistical baseline. Contamination is an algorithm parameter and must be examined through sensitivity analysis.
+\subsection{Controlled Perturbation}
+Synthetic perturbations are injected into a copy of invoice-level features. Their labels support precision, recall, and F1 calculation. Report the injection mechanism, affected features, proportion, random seed, and limitations.
+\subsection{KPI Sensitivity}
+Calculate KPIs on all records and compare with a scenario excluding invoices flagged by the detector. This measures sensitivity; it does not prove flagged invoices are incorrect.
+\section{Experimental Setup}
+Report sample size, sampling strategy, software versions, runtime, parameters, random seed, and any train/evaluation separation. Avoid data leakage.
+\section{Results and Discussion}
+\textbf{Complete only after executing experiments.} Insert actual tables and figures. Do not fabricate numerical findings. Discuss false positives, false negatives, synthetic-label limitations, and natural anomalies without ground truth.
+\section{Threats to Validity}
+Discuss dataset representativeness, synthetic anomaly realism, parameter sensitivity, lack of labels for naturally occurring anomalies, and the difference between statistical atypicality and data error.
+\section{Conclusion}
+Complete after results are available. Do not generalize from one UK retail dataset to all SMEs.
+\begin{thebibliography}{00}
+\bibitem{chen2012} D. Chen, ``Online Retail II,'' UCI Machine Learning Repository, 2012, doi: 10.24432/C5CG6D.
+\end{thebibliography}
+\end{document}
